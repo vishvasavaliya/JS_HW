@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series Generator</title>
+</head>
+<body>
+
+    <h1>Fibonacci Series Generator</h1>
+    <p>Enter the number of terms to generate in the Fibonacci series:</p>
+    
+    <label for="terms">Number of Terms:</label>
+    <input type="number" id="terms" placeholder="Enter number of terms"><br><br>
+    
+    <button onclick="generateFibonacci()">Generate Fibonacci Series</button>
+
+    <p id="result"></p>
+
+    <script>
+        function generateFibonacci() {
+            const terms = parseInt(document.getElementById('terms').value);
+
+            if (isNaN(terms) || terms <= 0) {
+                document.getElementById('result').innerText = "Please enter a valid number greater than 0.";
+                return;
+            }
+
+            let fibSeries = [];
+            let a = 0, b = 1;
+
+            for (let i = 0; i < terms; i++) {
+                fibSeries.push(a);
+                const next = a + b;
+                a = b;
+                b = next;
+            }
+
+            document.getElementById('result').innerText = "Fibonacci Series: " + fibSeries.join(", ");
+        }
+    </script>
+
+</body>
+</html>

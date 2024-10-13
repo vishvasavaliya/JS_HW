@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Square</title>
+</head>
+<body>
+
+    <h1>Square Area Calculator</h1>
+    <p>Enter the side length of the square:</p>
+    
+    <label for="side">Side Length:</label>
+    <input type="number" id="side" placeholder="Enter side length"><br><br>
+    
+    <button onclick="calculateArea()">Calculate Area</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateArea() {
+            const side = document.getElementById('side').value;
+
+            if (side === "") {
+                document.getElementById('result').innerText = "Please enter a valid side length.";
+                return;
+            }
+
+            const area = side * side; 
+            document.getElementById('result').innerText = "The area of the square is: " + area;
+        }
+    </script>
+
+</body>
+</html>

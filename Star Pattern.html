@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Pattern</title>
+</head>
+<body>
+
+    <h1>Star Pattern Program</h1>
+    
+    <button onclick="printStarPattern()">Show Star Pattern</button>
+
+    <pre id="result"></pre>
+
+    <script>
+        function printStarPattern() {
+            let pattern = "";
+
+            // Increasing part of the pattern
+            for (let i = 1; i <= 5; i++) {
+                pattern += "*".repeat(i) + "\n";
+            }
+            
+            // Decreasing part of the pattern
+            for (let i = 5; i >= 1; i--) {
+                pattern += "*".repeat(i) + "\n";
+            }
+
+            document.getElementById('result').innerText = pattern;
+        }
+    </script>
+
+</body>
+</html>

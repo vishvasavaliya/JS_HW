@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Odd Numbers</title>
+</head>
+<body>
+
+    <h1>Odd Numbers between 1 and 10</h1>
+    
+    <button onclick="findOddNumbers()">Show Odd Numbers</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findOddNumbers() {
+            let oddNumbers = [];
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 !== 0) {
+                    oddNumbers.push(i);
+                }
+            }
+            document.getElementById('result').innerText = "Odd numbers between 1 and 10: " + oddNumbers.join(", ");
+        }
+    </script>
+
+</body>
+</html>

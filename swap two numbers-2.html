@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Two Numbers</title>
+</head>
+<body>
+
+    <h1>Swap Two Numbers Using Third Variable</h1>
+    <p>Enter two numbers to swap:</p>
+    
+    <label for="num1">First Number:</label>
+    <input type="number" id="num1" placeholder="Enter first number"><br><br>
+    
+    <label for="num2">Second Number:</label>
+    <input type="number" id="num2" placeholder="Enter second number"><br><br>
+    
+    <button onclick="swapNumbers()">Swap Numbers</button>
+
+    <p id="result"></p>
+
+    <script>
+        function swapNumbers() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            
+            let temp = num1; 
+            num1 = num2;     
+            num2 = temp;     
+
+            document.getElementById('result').innerText = "After swapping: First Number = " + num1 + ", Second Number = " + num2;
+        }
+    </script>
+
+</body>
+</html>
