@@ -30,10 +30,10 @@
                 return;
             }
 
-            // Swap without using a third variable
-            num1 = num1 + num2; // Step 1: Add both numbers
-            num2 = num1 - num2; // Step 2: Subtract new num2 from sum to get num1
-            num1 = num1 - num2; // Step 3: Subtract new num2 from sum to get num2
+            
+            num1 = num1 + num2; 
+            num2 = num1 - num2; 
+            num1 = num1 - num2; 
 
             document.getElementById('result').innerText = "After swapping: First Number = " + num1 + ", Second Number = " + num2;
         }
